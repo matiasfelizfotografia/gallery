@@ -1,0 +1,39 @@
+.footerContainer{
+    color: white;
+    display: flex;
+    gap : 30em;
+    justify-content: center;
+    background-color: black;
+}
+
+.footerContainer  h1 {
+    color: grey;
+}
+
+.icons {
+    display: flex;
+    gap: 1.2em;
+}
+
+.icon {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+@media (max-width: 1320px){
+    .footerContainer{
+        gap: 1.25em;
+    }
+}
+
+@media (max-width: 980px){
+    .footerContainer{
+        gap: 0.625em;
+    }
+}
+
+@media (max-width: 500px){
+    .footerContainer{
+        flex-direction: column;
+    }
+}

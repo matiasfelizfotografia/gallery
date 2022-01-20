@@ -1,0 +1,13 @@
+.portafolioContainer{
+    gap: 5em;
+    width: 100%;    
+    height: 50%;
+}
+
+.text{
+    background-color: white;
+    padding-top: 7.5em;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+}

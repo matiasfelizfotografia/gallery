@@ -1,0 +1,160 @@
+
+
+.navBar_container {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 11vh;
+    background-color: black;
+    z-index: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    
+}
+.image{
+    height: 100%;
+    padding-left: 1.8%;
+}
+.title{
+    width: 100%;
+    color: white;
+    font-size: 4.4vh;
+    text-align: center;
+    justify-content: center;
+    background-position: 100%;
+
+    
+}
+
+.nav {
+    height: 100%;
+    display:flex;
+    gap:10%;    
+    padding-right: 8vh;
+    list-style-type: none;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    margin: auto;  
+}
+
+.navOthers {
+    display:flex;
+    gap:1.25em;    
+    padding: 1.25em 0.9375em;
+    
+}
+
+
+
+.menuItem {
+    text-decoration: none;
+    font-size: 2.3vh;
+    color: white;
+    border-radius: 0.1875em;
+    text-align: center;
+    justify-content: center ;
+    margin:auto;
+}
+.link{
+    text-decoration: none;
+    font-size: 2vh;
+    color: white;
+    border-radius: 0.1875em;
+    text-align: center;
+    justify-content: center ;
+    margin: auto;
+
+}
+.menuItemOthers {
+    text-decoration: none;
+    font-size: 0.9375em;
+    color: white;
+    border-radius: 0.1875em;
+   }
+
+.link:hover{
+    background-color: rgba(119, 181, 200, 0.438);
+    transition: 0.4s;
+}
+.logo{
+    height: 100%;
+    width: 20%;
+
+}
+.btn{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background-color: black;
+    margin: 0;
+    border: 0;
+    transition: all 0.4s;
+}
+
+.btn:hover{
+    background-color: #222;
+    cursor: pointer;
+}
+
+
+
+
+.menuItemOthers:hover{
+    background-color: rgba(119, 181, 200, 0.438);
+    transition: 0.5s;
+}
+@media screen and (max-width: 980px) {
+    .title{
+        display: none;
+    }
+    .nav{
+        margin-right: 0;
+    }
+
+}
+@media screen and (max-width: 1400px) {
+    .nav{
+        width: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .navBar_container{
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        padding-left: 0%;
+    }
+    .title{
+        display: none;
+    }
+    .menuItem{
+        width: 100%;
+        border-top: 1px solid #000;
+        text-align: center;
+        margin-right: 0px;
+        padding: 20px 0px;
+        border-color: beige;
+
+    }
+    .menuItem:hover{
+        background-color: rgba(119, 181, 200, 0.438);
+        transition: 0.5s;    }
+    .image{
+        width: 30%;
+        height: 25%;
+    }
+    .btn{
+        display: block;
+    }
+}

@@ -1,0 +1,64 @@
+.button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.dropdownContainer{
+  overflow: hidden;
+  border-color: beige;
+
+}
+
+.menu{
+  display: none;
+  position: fixed;
+  background-color: black;
+  min-width: 10em;
+  box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.menu a {
+  /*text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 3px 10px;*/
+
+  float: none;
+  color: white;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+
+.menuItem:hover{
+  background-color: rgba(119, 181, 200, 0.438);
+    transition: 0.5s;
+
+}
+
+.dropdownContainer:hover .menu{
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .menu a{
+    text-align: center;
+  }
+  .menu{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  
+  
+}

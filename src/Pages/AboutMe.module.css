@@ -1,0 +1,29 @@
+.aboutMe_container {
+    gap: 5em;
+    background-color: black;
+    
+}
+.navBar {
+    top: 0;
+    display: flex;
+    gap:inherit;
+    padding-bottom: 50px;
+}
+
+.aboutMe {
+    padding-top: 100px;
+    background-color: black;
+}
+.text{
+    background-color: white;
+    padding-top: 120px;
+    text-align: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+@media screen and (max-width: 700px) {
+    .aboutMe{
+        padding-top: 20px;
+    }
+}
