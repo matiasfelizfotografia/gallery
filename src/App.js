@@ -4,9 +4,13 @@ import { AboutMe } from './Pages/AboutMe';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import ContactMe from './Pages/ContactMe';
 import Portafolio from './Pages/Portafolio';
+import React from 'react';
 
 
 function App() {
+  React.useEffect(() => {
+    document.title = "MatiasFelizFotografia"
+  }, [])
   return (
       
       <Switch>
