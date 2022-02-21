@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {HashRouter} from 'react-router-dom'
+import {HashRouter,BrowserRouter,Redirect} from 'react-router-dom'
 
 
 ReactDOM.render(
@@ -12,9 +12,12 @@ ReactDOM.render(
       <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet"/>
 
     </head>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Redirect
+            from="/"
+            to="/home" />
       <App />
-    </HashRouter>
+    </BrowserRouter>
 
   </React.StrictMode>,
   document.getElementById('root')
