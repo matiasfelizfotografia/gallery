@@ -12,12 +12,12 @@ ReactDOM.render(
       <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet"/>
 
     </head>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
           <Redirect
             from="/"
             to="/home" />
       <App />
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>,
   document.getElementById('root')
