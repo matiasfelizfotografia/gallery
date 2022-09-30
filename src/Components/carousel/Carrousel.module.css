@@ -1,5 +1,7 @@
 .slider{
     width: 100%;
+    margin-top: 0;
+    box-sizing: border-box;
     height: 100%;
    
 }
@@ -7,10 +9,175 @@
 .slider_content,
 .slider_content_item{
     width: 100%;
+    box-sizing: border-box;
 }
+.image{
+    object-fit:cover;
+    align-self: center;
+    overflow: content;
+    justify-content: center;
+
+
+}
+
+@media screen and (min-width:1100px) and (max-height:615px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+
+
+@media screen and (min-width:1300px) and (max-height:715px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+
+
+@media screen and (min-width:1500px) and (max-height:680px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+
+
+@media screen and (min-width:1800px) and (max-height:1029px) {
+    .image{
+        object-position: 50% 20%;
+
+    }
+}
+
+@media screen and (min-width:1800px) and (max-height:840px) {
+    .image{
+        object-position: 50% 15%;
+
+    }
+}
+
+@media screen and (min-width:1800px) and (max-height:700px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+
+@media screen and (min-width:2000px) and (max-height:1200px) {
+    .image{
+        object-position: 50% 20%;
+
+    }
+}
+
+@media screen and (min-width:2000px) and (max-height:1090px) {
+    .image{
+        object-position: 50% 20%;
+
+    }
+}
+
+@media screen and (min-width:2000px) and (max-height:950px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+@media screen and (min-width:2000px) and (max-height:700px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+@media screen and (min-width:2300px) and (max-height:1380px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+
+@media screen and (min-width:2300px) and (max-height:1216px) {
+    .image{
+        object-position: 50% 15%;
+
+    }
+}
+
+@media screen and (min-width:2300px) and (max-height:980px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+@media screen and (min-width:2615px) and (max-height:1600px) {
+    .image{
+        object-position: 50% 30%;
+
+    }
+}
+
+
+
+@media screen and (min-width:2615px) and (max-height:1480px) {
+    .image{
+        object-position: 50% 20%;
+
+    }
+}
+
+@media screen and (min-width:2615px) and (max-height:1300px) {
+    .image{
+        object-position: 50% 15%;
+
+    }
+}
+
+@media screen and (min-width:2615px) and (max-height:1110px) {
+    .image{
+        object-position: 50% 10%;
+
+    }
+}
+
+@media screen and (min-width:2615px) and (max-height:700px) {
+    .image{
+        object-position: 50% 2%;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .slider_content img {
     width: 100%;
+    margin: 0;
+    padding: 0;
     height: 89vh;
-    object-fit: cover;
+    
 }

@@ -9,8 +9,10 @@ export const AboutMe = () => {
 
     return (
         <div className={Styles.aboutMe_container}>
-
-            <NavBarO />
+            <div className={Styles.navBar}>
+                <NavBarO  />
+            </div>
+            
             <div className={Styles.text}>
               <h1>Sobre mi</h1>
             </div> 

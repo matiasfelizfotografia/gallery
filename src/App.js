@@ -26,8 +26,8 @@ function App() {
         <Route exact path='/portfolio/retratos'>
           <Portafolio name="Retratos"/>
         </Route>
-        <Route exact path='/portfolio/marcas'>
-          <Portafolio name="Marcas"/>
+        <Route exact path='/portfolio/pasarela'>
+          <Portafolio name="Pasarela"/>
         </Route>
         <Route exact path='/portfolio/exteriores'>
           <Portafolio name="Exteriores"/>

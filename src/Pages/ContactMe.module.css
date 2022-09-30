@@ -1,6 +1,11 @@
 .contactMeContainer{
-
+   
     gap: 5em;
+}
+
+.navBar{
+    position: fixed;
+    width: 100%;
 }
 
 .contact {
@@ -25,7 +30,13 @@
 
 .maps{
     width: 100%;
-    height: 200px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.footer{
+    padding-top: 0;
+    margin-top: 0;
 }
 .mediosContacto {
     padding-top: 100px;

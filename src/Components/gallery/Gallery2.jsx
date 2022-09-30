@@ -3,7 +3,7 @@ import Styles from './Gallery.module.css'
 import { useEffect, useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import dataExteriores from '../../Images/Exteriores/exteriores.json'
-import dataMarcas from '../../Images/Marcas/marcas.json'
+import dataMarcas from '../../Images/Pasarela/pasarela.json'
 import dataRetratos from '../../Images/Retratos/retratos.json'
 import dataEstudio from '../../Images/Estudio/estudio.json'
 
@@ -21,8 +21,8 @@ export const Gallery = (props) => {
 
 
        }
-       if (props.name === "Marcas"){
-        imagesPath = "Marcas"
+       if (props.name === "Pasarela"){
+        imagesPath = "Pasarela"
         data = dataMarcas
 
 
@@ -67,7 +67,7 @@ export const Gallery = (props) => {
         <div className = {Styles.galleryContainer}>
             <div className = {Styles.imagess}>
                 {data.map((d) => {
-                    let imageSource = "/gallery/Images/" + imagesPath + "/" + d.name
+                    let imageSource = "/Images/" + imagesPath + "/" + d.name
                     return  <div className={Styles.pics} onClick = { () => getImage(imageSource)}>
                         <img className = {Styles.image} src={imageSource} alt="no carga"/>
                     </div>

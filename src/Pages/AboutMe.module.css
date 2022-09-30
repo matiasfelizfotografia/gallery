@@ -4,10 +4,8 @@
     
 }
 .navBar {
-    top: 0;
-    display: flex;
-    gap:inherit;
-    padding-bottom: 50px;
+    position: fixed;
+    width: 100%;
 }
 
 .aboutMe {

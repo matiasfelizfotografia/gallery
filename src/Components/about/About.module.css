@@ -5,18 +5,19 @@
 }
 
 .img {
-    height: 50%;
     width: 30%;
     align-self: center;
     overflow: hidden;
     justify-content: center;
     padding-left: 20px;
+    object-fit: cover;
 }
 
 .desc {
     justify-content: center;
     width: 50%;
     color: white;
+    text-align: justify;
     
 }
 
@@ -28,16 +29,15 @@
 }
 
 @media screen and (max-width : 835px){
-    .img{
-        width: 50%;
-    }
-}
-
-@media screen and (max-width : 700px){
-    .img{
-        width: 80%;
-    }
     .aboutMeContainer{
         flex-direction: column;
     }
+    .img{
+        width: 80%;
+       
+    }
+    .desc{
+        width: 100%;
+    }
 }
+

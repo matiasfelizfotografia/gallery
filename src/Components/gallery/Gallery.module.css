@@ -5,6 +5,13 @@
     width: 100%;
 
 }
+.picsNone{
+    display: none;
+}
+
+.pics{
+    display: block;
+}
 
 .images{
     display: flex;

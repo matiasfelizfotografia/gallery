@@ -3,16 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {HashRouter,BrowserRouter,Redirect} from 'react-router-dom'
+import {Helmet} from 'react-helmet'
+import logo from "./Images/logo.png"
+
+
+
+
 
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <head>
+    <Helmet>
+      <title>Matias Feliz Fotografia</title>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet"/>
-      <title>MatiasFelizFotografia</title>
+      <link rel="shortcut icon" href={logo} />
 
-    </head>
+    </Helmet>
     <HashRouter basename={process.env.PUBLIC_URL}>
           <Redirect
             from="/"
@@ -23,6 +31,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

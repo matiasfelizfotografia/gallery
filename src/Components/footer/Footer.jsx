@@ -11,9 +11,9 @@ export const Footer = () => {
     return (<div className = {Styles.footerContainer}>
                 <div className = {Styles.contacto}>
                     <h1> Contacto </h1>
-                    <p> Telefono : +549 2235936659 </p>
+                    <p> Teléfono : +549 2235936659 </p>
                     <p> Mail : matiasfeliz.fotografia@gmail.com</p>
-                    <p> Direccion : Cordoba 1747, local 46, primer piso </p>
+                    <p> Dirección : Cordoba 1747, local 46, primer piso </p>
 
                 </div>
                 <div className = {Styles.redes}>

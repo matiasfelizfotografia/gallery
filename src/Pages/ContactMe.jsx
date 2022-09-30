@@ -21,7 +21,11 @@ export const ContactMe = () => {
 
     return( 
             <div className={Styles.contactMeContainer}>
-                <NavBarO />
+                <div className={Styles.navBar}>
+                    <NavBarO />
+                </div>
+
+                
                 <div className={Styles.contact}>
                     <div className={Styles.form} >
                         <form onSubmit={sendEmail}>
@@ -44,34 +48,35 @@ export const ContactMe = () => {
                         
                     </div>
                     <div className={Styles.mediosContacto}>
-                        <p>Tambien podes contactarme por:</p>
-                        <p>Direccion : Cordoba 1747, local 46, primer piso</p>
-                        <p>Telefono : +549 2235936659</p>
+                        <p>También podes contactarme por:</p>
+                        <p>Dirección : Córdoba 1747, local 46, primer piso</p>
+                        <p>Teléfono : +549 2235936659</p>
                         <p>Mail : matiasfeliz.fotografia@gmail.com</p>
                     </div>
 
                 </div>
-                <div className="map">
+                <div className={Styles.map}>
                     <Gmaps
-                    width={'100%'}
-                    height={'200px'}
-                    lat={-37.99954307008053}
-                    lng={-57.54726863394392}
-                    zoom={16}
-                    loadingMessage={'No se pudo cargar el mapa'}
-                    params={params}
-                    googleMapUrl ="https://maps.googleapis.com/maps/api/js?v=3.exp$key=$AIzaSyATws37HqR7E9OEJCqajG--Qj0CynGiFkk"
-                    >
-                    <Marker
-                    lat= {-37.99954307008053}
-                    lng={-57.54726863394392}
-                    draggable={true}
-                     />
-   
-              </Gmaps> 
+                        width={'100%'}
+                        height={'200px'}
+                        lat={-37.99954307008053}
+                        lng={-57.54726863394392}
+                        zoom={16}
+                        loadingMessage={'No se pudo cargar el mapa'}
+                        params={params}
+                        googleMapUrl ="https://maps.googleapis.com/maps/api/js?v=3.exp$key=$AIzaSyATws37HqR7E9OEJCqajG--Qj0CynGiFkk"
+                        >
+                        <Marker
+                        lat= {-37.99954307008053}
+                        lng={-57.54726863394392}
+                        draggable={true}
+                        />
+    
+                    </Gmaps> 
                 </div>
-                
-            <Footer />
+             <div className={Styles.footer}>
+                <Footer />
+            </div>   
             
             </div>
         )

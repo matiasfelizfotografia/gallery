@@ -8,12 +8,7 @@ import  Style  from './Home.module.css'
 
 export const Home = () => {
     window.scrollTo(0, 0)
-
-
- 
-    
-       
-       
+   
     return (
         <div className={Style.container}>
             <div className={Style.navBar}>
