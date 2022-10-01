@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 import menu from "../../Images/menu.png"
 
 
-const NavBar = () => {
+const NavBar = (props) => {
     const location = useLocation();
     const {pathname} = location;
     const splitLocation = pathname.split("/");
@@ -38,7 +38,7 @@ const NavBar = () => {
             <h1 className={Style.title}>Matias Feliz Fotografia</h1>
             {(toggleMenu || screenWidth > 500) &&  <ul className={ Style.nav}>
                 <li className={Style.menuItem}><Link to="/"  className={Style.link}> Inicio </Link></li>
-                <li className={Style.menuItem}><Dropdown className={Style.link}/></li>
+                <li className={Style.menuItem}><Dropdown carpetas={props.carpetas} className={Style.link}/></li>
                 <li className={Style.menuItem}><Link to="/aboutMe" className={Style.link}> Sobre mi </Link></li>
                 <li className={Style.menuItem}><Link to="/contactMe" className={Style.link}> Contacto </Link></li>
             </ul>}

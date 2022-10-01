@@ -21,9 +21,7 @@ export const ContactMe = () => {
 
     return( 
             <div className={Styles.contactMeContainer}>
-                <div className={Styles.navBar}>
-                    <NavBarO />
-                </div>
+          
 
                 
                 <div className={Styles.contact}>

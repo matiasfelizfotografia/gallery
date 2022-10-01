@@ -1,35 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import Style from "./Dropdown.module.css"
+import CarpetaServices from '../../Services/CarpetaServices';
+import { render } from 'react-dom';
 
-const Dropdown = () => {
 
-  const [showMenu,setShowMenu] = useState(false);
+const Dropdown = (props) => {
+
+
 
   
-  const  showMenuu=(event)=> {
-    event.preventDefault();
-    
-      setShowMenu(!showMenu);
-  
-  }
-
-    return (
+   return (
       <div className={Style.dropdownContainer}>
-        <button className={Style.button} onClick={showMenuu}>
+        <button className={Style.button} >
           Portfolio
         </button>
-        
-        
+        <div className={Style.menu}>
 
-             {/*showMenu ||*/ <div className={Style.menu}>
-                <Link to="/portfolio/retratos" className={Style.menuItem}> Retratos </Link>
-                <Link to="/portfolio/estudio" className={Style.menuItem}> Estudio </Link>
-                <Link to="/portfolio/exteriores" className={Style.menuItem}> Exteriores </Link>
-                <Link to="/portfolio/pasarela" className={Style.menuItem} > Pasarela </Link>
+          {
+            props.carpetas.map((carpeta) =>{
+                return (carpeta.name != "Vertical" && carpeta.name != "Horizontal" && carpeta.name != "Perfil") && <Link to={"/portfolio/" + carpeta.name + "/" + carpeta.id} className={Style.menuItem}> {carpeta.name} </Link>
 
-              </div>} 
-  
+            })
+          }
+          </div>
+        
         
       </div>
     );

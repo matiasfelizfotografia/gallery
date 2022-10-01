@@ -1,12 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component,useState,useEffect } from 'react'
 import Styles from './About.module.css'
 import foto from '../../perfil.jpg'
+import ImagenServices from '../../Services/ImagenServices'
 
-export class About extends Component {
-    render() {
+export const About = ()  => {
+
+    const [imagen,setImagene] = useState([]);
+    const getImagenes = async (id) => new Promise (async (resolve) =>{
+        const data = await ImagenServices.getImagenes(id)
+        console.log(data)
+        setImagene(data)
+    })
+
+    useEffect(() => {
+        //if(id!= undefined)
+        getImagenes(3)
+    },[])
+
+    if(imagen.length == 0)
+    return null
         return (
         <div className={Styles.aboutMeContainer}>
-            <img className={Styles.img} src={foto} alt="Matias Feliz Fotografia" />
+            <img className={Styles.img} src={imagen[0].url} alt="Matias Feliz Fotografia" />
             <div className={Styles.desc}>
                 <h1>Sobre mi </h1>
                 <p>     Soy Matías Feliz, tengo 23 años y actualmente vivo en Mar del Plata. Amante
@@ -30,6 +45,6 @@ compartir lo que me apasiona con diferentes personas.</p>
         </div>
         )
     }
-}
+
 
 export default About

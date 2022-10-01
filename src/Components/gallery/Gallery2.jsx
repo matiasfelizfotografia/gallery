@@ -6,38 +6,28 @@ import dataExteriores from '../../Images/Exteriores/exteriores.json'
 import dataMarcas from '../../Images/Pasarela/pasarela.json'
 import dataRetratos from '../../Images/Retratos/retratos.json'
 import dataEstudio from '../../Images/Estudio/estudio.json'
+import ImagenService from "../../Services/ImagenServices"
+import { useParams } from 'react-router-dom';
 
 
 
 
 
 export const Gallery = (props) => {
+    
+    const [imagenes,setImagenes] = useState([]);
+    const { id } = useParams()
+    const getImagenes = async (id) => new Promise (async (resolve) =>{
+        const data = await ImagenService.getImagenes(id)
+        console.log(data)
+        setImagenes(data)
+    })
 
-       let imagesPath
-       let data
-       if (props.name === "Retratos"){
-        imagesPath = "Retratos"
-        data = dataRetratos
-
-
-       }
-       if (props.name === "Pasarela"){
-        imagesPath = "Pasarela"
-        data = dataMarcas
-
-
-       }
-       if (props.name === "Exteriores"){
-        imagesPath = "Exteriores"
-        data = dataExteriores
-
-       }
-
-       if (props.name === "Estudio"){
-        imagesPath = "Estudio"
-        data = dataEstudio
-
-       }
+    useEffect(() => {
+        console.log(id)
+        //if(id!= undefined)
+        getImagenes(id.toString())
+    },[id])
 
 
 
@@ -66,12 +56,12 @@ export const Gallery = (props) => {
         </div>
         <div className = {Styles.galleryContainer}>
             <div className = {Styles.imagess}>
-                {data.map((d) => {
-                    let imageSource = "/Images/" + imagesPath + "/" + d.name
-                    return  <div className={Styles.pics} onClick = { () => getImage(imageSource)}>
-                        <img className = {Styles.image} src={imageSource} alt="no carga"/>
+                {imagenes.map((im) =>{
+                    return  <div className={Styles.pics} onClick = { () => getImage(im.url)}>
+                        <img className = {Styles.image} src={im.url} alt="no carga"/>
                     </div>
-                })}
+                })
+                }
 
 
 
