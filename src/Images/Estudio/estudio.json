@@ -1,10 +1,1 @@
-[
-    {"name": "1.jpg"},
-    {"name": "2.jpg"},
-    {"name": "3.jpg"},
-    {"name": "4.jpg"},
-    {"name": "5.jpg"},
-    {"name": "6.jpg"},
-    {"name": "7.jpg"},
-    {"name": "8.jpg"}
-]
+{"name":"1.jpg","name":"2.jpg","name":"3.jpg","name":"4.jpg","name":"5.jpg","name":"6.jpg","name":"7.jpg","name":"8.jpg"}

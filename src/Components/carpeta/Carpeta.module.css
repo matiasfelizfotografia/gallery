@@ -1,0 +1,21 @@
+
+.carpetaContainer {
+    box-shadow: 1em;
+    display: flex;
+    box-sizing: border-box;
+    border: 0.1em solid;
+    width: 6em;
+    height: 2em;
+    border-radius: 8%;
+    flex-wrap: wrap;
+}
+
+.name{
+    margin: auto;
+}
+
+.image{
+    margin: auto;
+    width: 1.5em;
+    height: 1.5em;
+}
